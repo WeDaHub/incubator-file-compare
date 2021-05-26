@@ -14,7 +14,7 @@ from flask import Response
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/', methods=['POST', 'GET'])
 def upload_file():
     return render_template("input.html")
 
