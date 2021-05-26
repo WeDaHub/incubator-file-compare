@@ -21,14 +21,14 @@ def upload_file():
 
 @app.route('/compare', methods=['POST', 'GET'])
 def compare():
-    file1 = request.form['file1']
-    file2 = request.form['file2']
-    text1_line = file1.splitlines()
-    text2_line = file2.splitlines()
-    d = difflib.HtmlDiff()
-    if request.method == 'GET':
+    if request.method == 'POST':
+        file1 = request.form['file1']
+        file2 = request.form['file2']
+        text1_line = file1.splitlines()
+        text2_line = file2.splitlines()
+        d = difflib.HtmlDiff()
         return Response(d.make_file(text1_line, text2_line), mimetype="text/html")
-    return Response(d.make_file(text1_line, text2_line), mimetype="text/html")
+    return render_template("input.html")
 
 
 if __name__ == "__main__":
