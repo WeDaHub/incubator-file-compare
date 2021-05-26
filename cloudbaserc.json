@@ -1,0 +1,18 @@
+{
+  "envId": "{{env.ENV_ID}}",
+  "version": "2.0",
+  "$schema": "https://framework-1258016615.tcloudbaseapp.com/schema/latest.json",
+  "framework": {
+    "name": "file-compare",
+    "plugins": {
+      "container": {
+        "use": "@cloudbase/framework-plugin-container",
+        "inputs": {
+          "serviceName": "file-compare",
+          "servicePath": "/file-compare",
+          "containerPort": 8081
+        }
+      }
+    }
+  }
+}
