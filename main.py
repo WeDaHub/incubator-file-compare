@@ -9,6 +9,7 @@
 
 from flask import Flask, render_template, request
 import difflib
+from flask import Response
 
 app = Flask(__name__)
 
@@ -26,8 +27,8 @@ def compare():
     text2_line = file2.splitlines()
     d = difflib.HtmlDiff()
     if request.method == 'POST':
-        return d.make_file(text1_line, text2_line)
-    return d.make_file(text1_line, text2_line)
+        return Response(d.make_file(text1_line, text2_line), mimetype="text/html")
+    return Response(d.make_file(text1_line, text2_line), mimetype="text/html")
 
 
 if __name__ == "__main__":
