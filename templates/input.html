@@ -2,16 +2,22 @@
 <html>
 <head>
     <title>File compare form </title>
+    <!-- 包含头部信息用于适应不同设备 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 包含 bootstrap 样式表 -->
+    <link rel="stylesheet" href="https://apps.bdimg.com/libs/bootstrap/3.2.0/css/bootstrap.min.css">
 </head>
 
 
-<body>
-    <div align="center">
-    <h1> File compare </h1>
-    <form method="post" action="compare">
-         <textarea rows="10" cols="100" name="file1" >Please input file1 here ...</textarea>
-         <textarea rows="10" cols="100" name="file2" >Please input file2 here ...</textarea>
-        <div style="text-align:center;"><input type="submit" value="Submit"/></div>
+<body style="background-color: #563d7c">
+    <div align="center" class="pre-scrollable">
+    <h1 class="bg-primary"> File compare </h1>
+    <form method="post" action="compare" class="form-inline">
+         <textarea rows="10" cols="100" name="file1" class="form-control" placeholder="Please input file1 here ..."></textarea>
+         <textarea rows="10" cols="100" name="file2" class="form-control" placeholder="Please input file1 here ..."></textarea>
+        <br/>
+        <br/>
+        <div style="text-align:center;"><input type="submit" value="Submit" class="btn btn-default"/></div>
 
     </form>
     </div>
