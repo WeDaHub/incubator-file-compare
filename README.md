@@ -4,6 +4,9 @@ file-compare
 ## 项目介绍
 基于Flask 提供文件对比功能
 
+## 队伍成员
+[donngchao](https://github.com/donngchao)
+
 
 
 ## 应用场景
@@ -23,8 +26,6 @@ file-compare
 - main.py (基于flask和difflib提供文件比对功能)
 - templates/input.html
 
-## 队伍成员
-[donngchao](https://github.com/donngchao)
 
 
 ## 基于CloudBase 云托管一键部署
